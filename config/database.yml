@@ -17,10 +17,10 @@ development:
   password: root
 
 production:
-  host: 127.7.236.2
+  host: 127.2.248.2
   adapter: mysql
-  database: railsdemoapp
-  user: adminHug7hCM
-  password: iGQzUl51pkK1
-  socket: /var/lib/openshift/5329d4c5500446fae20000dc/mysql//socket/mysql.sock
+  database: rdemoapp
+  user: admin3rDhJeJ
+  password: RDwCHLNh3uxf
+  socket: /var/lib/openshift/5329e7885973cad981000032/mysql//socket/mysql.sock
   port: 3306
