@@ -15,11 +15,11 @@
 #   pool: 5
 #   username: root
 #   password: root
-# production:
-#   host: 127.2.248.2
-#   adapter: mysql
-#   database: rdemoapp
-#   user: admin3rDhJeJ
-#   password: RDwCHLNh3uxf
-#   socket: /var/lib/openshift/5329e7885973cad981000032/mysql//socket/mysql.sock
-#   port: 3306
+production:
+  host: 127.2.248.2
+  adapter: mysql
+  database: rdemoapp
+  user: admin3rDhJeJ
+  password: RDwCHLNh3uxf
+  socket: /var/lib/openshift/5329e7885973cad981000032/mysql//socket/mysql.sock
+  port: 3306
