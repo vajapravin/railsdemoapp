@@ -1,0 +1,10 @@
+<div class="container">
+	<%= form_tag({controller: welcome_index_path, action: :search}, method: :post, class: "form-vertical", role: "form", remote: true) do %>
+		<div class="form-group">
+			<%= search_field :search_keyword, "", class: "form-control", placeholder: "Enter your search string here..." %>
+		</div>
+	<% end %>
+	<div class="table-responsive">
+		
+  	</div>
+</div> <!-- /container -->

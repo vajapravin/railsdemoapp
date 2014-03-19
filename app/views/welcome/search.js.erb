@@ -1,0 +1,4 @@
+$(".table-responsive").html("");
+<% if !@results.blank? %>
+	$(".table-responsive").html('<%= escape_javascript render :partial => "tablebody", :object => @results %>');
+<% end %>
