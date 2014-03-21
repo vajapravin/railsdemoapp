@@ -1,10 +1,40 @@
 <div class="container">
 	<%= form_tag({controller: welcome_index_path, action: :search}, method: :post, class: "form-vertical", role: "form", remote: true) do %>
 		<div class="form-group">
-			<%= search_field :search_keyword, "", class: "form-control", placeholder: "Enter your search string here..." %>
+			<%= search_field :search_keyword, "", class: "form-control", "data-provide" => "typeahead", placeholder: "Enter your search string here...", autocomplete: "off" %>
 		</div>
 	<% end %>
 	<div class="table-responsive">
 		
   	</div>
 </div> <!-- /container -->
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+<script type="text/javascript">
+	$(document).ready(function(){
+		var normalize = function( term ) {
+	      var ret = "";
+	      for ( var i = 0; i < term.length; i++ ) {
+	        ret += term.charAt(i);
+	      }
+	      return ret;
+	    };
+		$("#search_keyword_").on('change keyup paste', function(){
+			$.ajax({
+				url:"/welcome/search.json?ajax=true&search_keyword="+$(this).val(),
+				method: "post",
+				success:function(results){
+					$("#search_keyword_").autocomplete({
+				    	source: function( request, response ) {
+							var matcher = new RegExp( $.ui.autocomplete.escapeRegex( request.term ), "i" );
+					        response( $.grep(results, function( value ) {
+					          value = value.label || value.value || value;
+					          return matcher.test( value ) || matcher.test( normalize( value ) );
+					        }) );
+					    }
+				    });
+				}
+			});
+		});
+	});
+</script>

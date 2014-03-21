@@ -8,18 +8,18 @@
 #
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
-# development:
-#   adapter: mysql2
-#   encoding: utf8
-#   database: Demoapp_development
-#   pool: 5
-#   username: root
-#   password: root
-production:
-  host: 127.2.248.2
-  adapter: mysql
-  database: rdemoapp
-  user: admin3rDhJeJ
-  password: RDwCHLNh3uxf
-  socket: /var/lib/openshift/5329e7885973cad981000032/mysql//socket/mysql.sock
-  port: 3306
+ development:
+   adapter: mysql2
+   encoding: utf8
+   database: Demoapp_development
+   pool: 5
+   username: root
+   password: kasturi
+#production:
+#  host: 127.2.248.2
+#  adapter: mysql
+#  database: rdemoapp
+#  user: admin3rDhJeJ
+#  password: RDwCHLNh3uxf
+#  socket: /var/lib/openshift/5329e7885973cad981000032/mysql//socket/mysql.sock
+#  port: 3306
